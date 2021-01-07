@@ -1,0 +1,10 @@
+{
+    "name": "laravel-echo-server",
+    "version": "0.0.1",
+    "description": "Laravel Echo Server",
+    "dependencies": {
+        "dotenv": "^4.0.0",
+        "laravel-echo-server": "1.6.2",
+        "node-cron": "2.0.3"
+    }
+}
