@@ -19,6 +19,10 @@ ws.run({
             host: env.REDIS_HOST,
             port: env.REDIS_PORT,
         }
+    },
+    maxRetriesPerRequest: 2,
+    retryStrategy: function() {
+        throw err;
     }
 });
 
