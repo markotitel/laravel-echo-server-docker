@@ -20,7 +20,7 @@ ws.run({
             port: env.REDIS_PORT,
         }
     },
-    maxRetriesPerRequest: 2,
+    //maxRetriesPerRequest: 2,
     retryStrategy: function(times) {
         console.log('REDIS CONNECTION ERROR!!!');
         throw '';
