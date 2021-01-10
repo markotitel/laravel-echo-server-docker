@@ -19,13 +19,15 @@ ws.run({
             host: env.REDIS_HOST,
             port: env.REDIS_PORT,
         }
-    },
-    //maxRetriesPerRequest: 2,
-    retryStrategy: function(times) {
-        console.log('REDIS CONNECTION ERROR!!!');
-        throw '';
     }
+}).then(function() {
+    red = ws.subscribers[0];
+    red._redis.on('error', err => {
+       console.log('REDIS: FAILED');
+       process.exit(0);
+    });
 });
+
 
 cron.schedule('* * * * *', () => {
   console.log(ws.httpApi.io.engine.clientsCount);
