@@ -22,6 +22,7 @@ ws.run({
     },
     maxRetriesPerRequest: 2,
     retryStrategy: function() {
+        console.log('REDIS CONNECTION ERROR!!!');
         throw err;
     }
 });
