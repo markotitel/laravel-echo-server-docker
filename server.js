@@ -18,6 +18,11 @@ ws.run({
         redis: {
             host: env.REDIS_HOST,
             port: env.REDIS_PORT,
+    retryStrategy: function(times) {
+                console.log("REDIS ERROR :" + times);
+                throw '';
+            }
+
         }
     }
 }).then(function() {
