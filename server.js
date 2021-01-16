@@ -35,5 +35,5 @@ ws.run({
 
 
 cron.schedule('* * * * *', () => {
-  console.log(ws.httpApi.io.engine.clientsCount);
+  console.log('Connected clients', ws.httpApi.io.engine.clientsCount);
 });
