@@ -20,11 +20,11 @@ ws.run({
             port: env.REDIS_PORT,
         }
     },
-    "apiOriginAllow": {
-    "allowCors": true,
-    "allowOrigin": "*",
-    "allowMethods": "OPTIONS, GET, POST",
-    "allowHeaders": "*"
+    apiOriginAllow: {
+    allowCors: true,
+    allowOrigin: "*",
+    allowMethods: "OPTIONS, GET, POST",
+    allowHeaders: "*"
   }
 });
 
