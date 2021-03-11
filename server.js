@@ -19,7 +19,13 @@ ws.run({
             host: env.REDIS_HOST,
             port: env.REDIS_PORT,
         }
-    }
+    },
+    "apiOriginAllow": {
+    "allowCors": true,
+    "allowOrigin": "*",
+    "allowMethods": "OPTIONS, GET, POST",
+    "allowHeaders": "*"
+  }
 });
 
 cron.schedule('* * * * *', () => {
