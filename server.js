@@ -28,8 +28,6 @@ ws.run({
   }
 });
 
-console.log(ws);
-
 cron.schedule('* * * * *', () => {
   console.log(ws.httpApi.io.engine.clientsCount);
 });
